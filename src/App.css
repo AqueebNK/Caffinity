@@ -1,38 +1,570 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.headerig {
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.4) 60%,rgba(0, 0, 0, 0.2)100%), url(coffee3.jpg);
+  height: 130vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul li {
+  margin: 20px;
+}
+
+ul li a {
+  margin-right: 15px;
+  text-decoration: solid;
+  font-style: normal;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 25px;
+}
+
+ul li a:hover::after {
+  color: rgb(171, 134, 41);
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: rgb(171, 134, 41);
+  display: block;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.navl::after {
+  content: '';
+  height: 3px;
+  width: 0%;
+  background-color: rgb(171, 134, 41);
+  display: block;
+  border-radius: 4px;
+}
+
+.menu {
+  margin-left: 55px;
+  margin-right: 155px;
+  padding-top: 22px;
+}
+
+.cof {
+  font-size: 2.8em;
+  font-weight: 200;
+  margin-right: 55px;
+  margin-left: 120px;
+  padding-top: 22px;
+  color: wheat;
+}
+
+nav {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} 
+
+
+
+/* Slide In Animation for Navbar */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Adjusting Navbar Links for Android Devices */
+@media only screen and (max-width: 768px) {
+  nav {
+    animation: slideIn 1s ease-out; /* Slide animation for mobile */
+  }
+
+  ul {
+    flex-direction: column; /* Stack the nav items vertically on smaller screens */
+    align-items: center;
+  }
+
+  ul li {
+    margin: 15px 0; /* Adjust margin for smaller devices */
+  }
+
+  .menu {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 8px;
+  }
+
+  .cof {
+    font-size: 2em;
+    margin-left: 20px;
+  }
+
+  ul li a {
+    font-size: 8px; /* Reduce font size for mobile */
+  }
+
+  ul li a:hover::after {
+    color: rgb(171, 134, 41);
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: rgb(171, 134, 41);
+    display: block;
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cof {
+    font-size: 1.8em;
+    margin-left: 15px;
+  }
+
+  ul li a {
+    font-size: 20px; /* Further reduce font size for small screens */
+  }
+
+  .menu {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+  }
+}
+
+
+
+
+.headerig .btn-hdr {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  position: absolute;
+  left: 2%;
+  top: 102%;
+  background: transparent;
+  font-size: 20px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.getrecp {
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+.headerig button:hover {
+  background-color: rgb(171, 134, 41);
+  color: whitesmoke;
+  
+}
+
+.content .btn:hover {
+  background-color: rgb(171, 134, 41);
+  color: whitesmoke;
+}
+
+.header h1 {
+  color: white;
+  margin: 10px;
+  font-size: 40px;
+}
+
+.headerig .cof:first-letter {
+  font-size: 45px;
+  color: rgb(171, 134, 41);
+}
+
+.content {
+  color: whitesmoke;
+  font-size: 20px;
+  position: absolute;
+  left: 85px;
+  top: 30vh;
+}
+
+.content h1 {
+  font-size: 3em;
+  font-family: "Satisfy", cursive;
+}
+
+.content p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.headergg {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.headergg .ca {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #131313;
+  margin-top: 4em;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img-top {
+  height: 180px;
+  width: 17.5rem;
+  object-fit: cover;
+}
+
+.headergg .card {
+  background-color: #070707;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  margin-top: 130px;
+  margin-bottom: 130px;
+  height: 50vh;
+}
+
+.headergg .card .btn {
+  background-color: rgb(171, 134, 41);
+  color: whitesmoke;
+  border: none;
+}
+
+.headergg .card:hover {
+  cursor: pointer;
+  border: 2px solid rgb(171, 134, 41);
+}
+
+.headergg #carouselExampleCaptions {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  height: 70vh;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.d-block {
+  height: 70vh;
+  object-fit: cover;
+}
+
+.footer {
+  padding: 50px 10%;
+  border-top: 2px solid #333;
+  background-color: #000;
+  color: #bbb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer .col {
+  min-width: 150px;
+}
+
+.footer .col a {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.language-btn {
+  background-color: #1c1c1c;
+  color: #bbb;
+  padding: 10px 20px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.language-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-note {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+
+.txt {
+  font-weight: 300;
+  font-size: 3em;
+  font-family: "Satisfy", cursive;
+  transition: all 0.8s ease;
+}
+
+.txt.shrink {
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.txt, .content p, .headerig .btn-hdr {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.txt.shrink, .content p.shrink, .headerig .btn-hdr.shrink {
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.review-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 15%;
+  gap: 2em;
+  margin-bottom: 15%;
+}
+
+.review-scroller {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+.review-card {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 58vh;
+  width: 20vw;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  margin-top: 50%;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Recipe Page Styles */
+.recipe-page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #0a0a0a;
+}
+
+.recipe-post {
+  width: 100%;
+  max-width: 500px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.recipe-post:hover {
+  border: 1px solid #f39c12;
+}
+
+.recipe-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.recipe-description {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #b8b2b2;
+}
+
+
+.recipe-content h4 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #f39c12;
+}
+
+.recipe-content pre {
+  overflow-x:scroll ;
+  color: #938f8f;
+  font-size: 18px;
+}
+
+.recipe-reactions {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.reaction-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: wheat;
+}
+
+.reaction-btn.active {
+  color: #f39c12;
+}
+
+.reaction-btn:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+
+
+/* Login and Register Styles */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(coffee2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-form {
+  width: 400px;
+  padding: 40px;
+  background-color: rgba(26, 26, 26, 0.671);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(171, 134, 41);
+  font-family: "Satisfy", cursive;
+  font-size: 36px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 5px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: rgb(171, 134, 41);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.auth-btn:hover {
+  background-color: rgb(141, 114, 41);
+}
+
+.auth-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  color: rgb(171, 134, 41);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
