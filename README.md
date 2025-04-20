@@ -8,6 +8,9 @@ Caffinity is a full-stack MERN (MongoDB, Express.js, React, Node.js) web applica
 ![image](https://github.com/user-attachments/assets/b7cd0343-5f2e-4c43-a1e5-e94affdecd3b)
 
 
+![image](https://github.com/user-attachments/assets/0e22c7a8-21eb-4d2b-a12c-1c819cd85deb)
+
+
 ![image](https://github.com/user-attachments/assets/b18fbe5d-7ce7-4538-8577-c94688c2cc94)
 
 
