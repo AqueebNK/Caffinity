@@ -1,6 +1,8 @@
 # ☕ Caffinity — Coffee Social Platform
 
-Caffinity is a full-stack MERN (MongoDB, Express.js, React, Node.js) web application that lets coffee enthusiasts connect, share, and react to various coffee recipes. Users can like, dislike, or mark recipes as neutral, and receive personalized recommendations based on their reactions.
+Caffinity is a full-stack MERN (MongoDB, Express.js, React, Node.js) web application that lets coffee enthusiasts connect, share, and react to various coffee recipes. Users can like, dislike, or mark recipes as neutral, and receive personalized recommendations based on their reactions. 
+
+# Link- majestic-granita-dfcd3b.netlify.app
 
 ![image](https://github.com/user-attachments/assets/b3e8667e-fd83-4701-a61c-7f74a34ce9ce)
 
